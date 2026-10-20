@@ -4,9 +4,9 @@
    Each item sits between { }, and items are separated by commas. */
 
 var PHOTOS = [
-  { src: 'photos/photo1.jpg', caption: '', alt: 'Abigail smiling, in a cream dress', pos: '50% 8%' },
-  { src: 'photos/photo2.jpg', caption: '', alt: 'Abigail smiling, in a green dress', pos: '50% 8%' },
-  { src: 'photos/photo3.jpg', caption: '', alt: 'Abigail smiling, in a white top and pink fringed skirt', pos: '50% 0%' }
+  { src: 'photo1.jpg', caption: '', alt: 'Abigail smiling, in a cream dress', pos: '50% 8%' },
+  { src: 'photo2.jpg', caption: '', alt: 'Abigail smiling, in a green dress', pos: '50% 8%' },
+  { src: 'photo3.jpg', caption: '', alt: 'Abigail smiling, in a white top and pink fringed skirt', pos: '50% 0%' }
 ];
 
 var VIDEOS = [
