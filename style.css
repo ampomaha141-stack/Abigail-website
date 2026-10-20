@@ -87,3 +87,35 @@ h3{font:700 1.3rem/1.25 var(--head);margin:0 0 .2rem}
   .hero{padding:4rem 0 7rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ===== pictures strip, gallery, videos ===== */
+nav a[aria-current="page"]{border-color:var(--gold)}
+.strip{overflow:hidden;background:var(--ink);padding:.6rem 0}
+.strip[hidden]{display:none}
+.strip-track{display:flex;gap:.6rem;width:max-content;animation:scroll 60s linear infinite}
+.strip:hover .strip-track{animation-play-state:paused}
+.strip-item{flex:none;width:15rem;height:9.5rem;border-radius:6px;overflow:hidden;background:var(--sea)}
+.strip-item img,.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes scroll{to{transform:translateX(calc(-50% - .3rem))}}
+@media (prefers-reduced-motion:reduce){.strip{overflow-x:auto}.strip-track{animation:none}}
+.missing{background:linear-gradient(135deg,var(--sea),var(--teal));display:flex;align-items:center;justify-content:center}
+.missing::after{content:"Add photo";color:#D6E6E4;font-size:.9rem}
+
+.page{padding-top:3.5rem;padding-bottom:5rem;min-height:60vh}
+.page-title{font:800 clamp(2.4rem,7vw,4rem)/1 var(--head);letter-spacing:-.02em;margin:0 0 1rem}
+.intro{color:var(--muted);margin:0 0 2.5rem;max-width:36rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1.4rem}
+.grid-item{all:unset;cursor:pointer;display:block}
+.grid-item:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.thumb{aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:var(--mist)}
+.grid-item span{display:block;margin-top:.5rem;font-size:.95rem;color:var(--muted)}
+#lightbox{border:0;padding:1rem;max-width:min(92vw,60rem);background:var(--paper);color:var(--ink);border-radius:8px}
+#lightbox::backdrop{background:rgba(5,15,18,.85)}
+#lightbox img{display:block;max-width:100%;max-height:75vh;margin:0 auto}
+#lightbox p{margin:.8rem 0 0;text-align:center}
+#lightbox .close{display:block;margin:0 0 .8rem auto;font:inherit;font-weight:600;background:var(--gold);color:#10262E;border:0;border-radius:999px;padding:.4rem 1.1rem;cursor:pointer}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(20rem,1fr));gap:2rem}
+.vgrid figure{margin:0}
+.vgrid video,.vgrid iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:6px;background:#000;display:block}
+.vgrid figcaption{margin-top:.5rem;font-weight:500}
+.empty{color:var(--muted)}

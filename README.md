@@ -12,3 +12,7 @@ Static site (HTML, CSS, JavaScript). No build step.
 - Text: `index.html`
 - Colours and fonts: top of `style.css`
 - CV file: replace `assets/Abigail_Owusu_Ampomah_CV.docx` (keep the same name or update the two links)
+
+## Adding pictures and videos
+- **Pictures:** upload image files to the `photos` folder (JPG, about 1600 px wide is plenty), then list them in `media.js` under `PHOTOS`. The first ones also scroll across the top of every page.
+- **Videos:** upload `.mp4` files to the `videos` folder (GitHub's web upload limit is 25 MB per file), or use a YouTube video ID for longer videos. List them in `media.js` under `VIDEOS`.
